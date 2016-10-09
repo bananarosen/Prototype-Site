@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <title>Prototype</title>
+      
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+  </head>
+    
+  <body>
+      
+      <!--Collapsable bootstrap nav so that the menu is a hamburger on mobile-->
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar">
+                    </span><span class="icon-bar">
+                    </span><span class="icon-bar"></span>
+                </button>      
+                <a class="navbar-brand" href="#">Family List</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Family List</a></li>
+                    <li><a href="#">My List</a></li>
+                    <li><a href="#">Grow Family</a></li> 
+                </ul>
+            </div>
+        </div>
+      </nav>
+      
+      <!-- div container for family list --> 
+      <div id="family_list_container">
+      
+      <!-- list of tasks-->
+      <ul class="list-group" id="family_list">
+        <li class="list-group-item" id="task_getg">
+            <span class="label"><img src="img/kim.jpg" alt="kim" width="20" height="20"></span>
+            Get groceries
+            <span class="glyphicon glyphicon-remove float_right"></span>
+            <span class="glyphicon glyphicon-ok float_right"></span>
+        </li>
+        <li class="list-group-item" id="task_payb">
+            <span class="label"><img src="img/kim.jpg" alt="kim" width="20" height="20"></span>
+            Pay bills
+            <span class="glyphicon glyphicon-remove float_right"></span>
+            <span class="glyphicon glyphicon-ok float_right"></span>
+        </li>
+        <li class="list-group-item" id="task_pick">
+            <span class="label"><img src="img/kanye.jpg" alt="kanye" width="20" height="20"></span>
+            Pick kids up from school
+            <span class="glyphicon glyphicon-remove float_right"></span>
+            <span class="glyphicon glyphicon-ok float_right"></span>
+        </li>
+        <li class="list-group-item" id="task_take">
+            <span class="label"><img src="img/saint.jpg" alt="saint" width="20" height="20"></span>
+            Take out trash
+            <span class="glyphicon glyphicon-remove float_right"></span>
+            <span class="glyphicon glyphicon-ok float_right"></span>
+        </li>
+        <li class="list-group-item" id="task_dodi">
+            <span class="label"><img src="img/kanye.jpg" alt="kanye" width="20" height="20"></span>
+            Do dishes
+            <span class="glyphicon glyphicon-remove float_right"></span>
+            <span class="glyphicon glyphicon-ok float_right"></span>
+        </li>
+        <li class="list-group-item">
+            <span class="label"><img src="img/kim.jpg" alt="kim" width="20" height="20"></span>
+            Call Khloe
+            <span class="glyphicon glyphicon-remove float_right"></span>
+            <span class="glyphicon glyphicon-ok float_right"></span>
+        </li>
+        <li class="list-group-item">
+            <span class="label"><img src="img/north.jpg" alt="north" width="20" height="20"></span>
+            Feed cat
+            <span class="glyphicon glyphicon-remove float_right"></span>
+            <span class="glyphicon glyphicon-ok float_right"></span>
+        </li>
+        <li class="list-group-item">
+            <span class="label"><img src="img/north.jpg" alt="north" width="20" height="20"></span>
+            Sort laundry
+            <span class="glyphicon glyphicon-remove float_right"></span>
+            <span class="glyphicon glyphicon-ok float_right"></span>
+        </li>
+      </ul>
+      
+      <div class="footer navbar-fixed-bottom centre">
+          <button class="bottom_button" id="add_task">
+              <span class="glyphicon glyphicon-plus"></span>
+              Add Task
+          </button>
+      </div>
+          
+    </div> <!--end of #family_list_container --> 
+      
+    <div id="add_task_container">
+        <h4>Who should do this task?</h4>
+        <div class="row task_div">
+            <div class="col-xs-2">
+                <img src="img/kim.png" class="img-thumbnail person" id="kim" alt="kim">
+            </div>
+            <div class="col-xs-2">
+                <img src="img/kanye.png" class="img-thumbnail person" id="kanye" alt="kanye">
+            </div>
+            <div class="col-xs-2">
+                <img src="img/north.jpg" class="img-thumbnail person" id="north" alt="north">
+            </div>
+            <div class="col-xs-2">
+                <img src="img/saint.jpg" class="img-thumbnail person" id="saint" alt="saint">
+            </div>
+        </div>
+      
+        <h4>What should they do?</h4>
+        <input type="text" name="task" id="task_field">
+        <button id="complete_add">Add Task</button>
+        
+    </div> <!-- end of #add_task_container -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/myscript.js"></script>
+  </body>
+</html>

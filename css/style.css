@@ -1,0 +1,52 @@
+
+.float_right {
+    float: right;
+    margin: 0 0 10px 10px;
+}
+    
+.bottom_button {
+    background-color: lightgoldenrodyellow;
+    padding: 10px 60px 10px 60px;
+    border-radius: 4px;
+    font-size: 14pt;  
+}
+
+.centre {
+    text-align: center;
+}
+
+.task_div {
+    margin-top: 30px;
+}
+
+#add_task_container{
+    margin-left: 30px;
+}
+
+.person:hover {
+    background-color: orange;
+}
+
+.person_selected {
+    background-color: darkorange;
+}
+
+.glyphicon-remove {
+    color: red;
+}
+
+.glyphicon-remove:hover {
+    color: darkred;
+}
+
+.glyphicon-ok {
+    color: gray;
+}
+
+.glyphicon-ok:hover {
+    color: black;
+}
+
+.task_done {
+    text-decoration: line-through;
+}
