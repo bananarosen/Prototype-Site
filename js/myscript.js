@@ -7,6 +7,7 @@ var task;
 $(document).ready(function() {
     $("#add_task_container").hide();
     $("#change_person_container").hide();
+    $(".toolbox").hide();
 });
 
 //switching to the add task view
@@ -35,7 +36,7 @@ $("#complete_add").click(function(){
     taskentered = ($("#task_field").val());
     $("#add_task_container").hide();
     $("#family_list_container").show();
-    $("#family_list").append('<li class="list-group-item">' + '<span class="label"><img src="img/'+ familymember+ '.jpg" width="20" height="20"></span>' + taskentered + '<span class="glyphicon glyphicon-remove float_right"></span><span class="glyphicon glyphicon-ok float_right"></span></li>');
+    $("#family_list").append('<li class="list-group-item">' + '<span class="label"><img src="img/'+ familymember+ '.jpg" width="20" height="20"></span> <span class="basic_task">'+ taskentered + ' </span><span class="glyphicon glyphicon-pencil"></span><span class="glyphicon glyphicon-remove float_right"></span><span class="glyphicon glyphicon-ok float_right"></span></li>');
     createOnClickListenerRemove(); 
 });
 
@@ -54,7 +55,7 @@ $('#family_list_container').on('click', '.glyphicon-ok', function() {
     $(this).parent().toggleClass("task_done");
 }); 
 
-$(".glyphicon-pencil").click(function(){
+$('#family_list_container').on('click', '.glyphicon-pencil', function(){
    $("#family_list_container").hide();
    task = $(this).parent();
    taskentered = $(task).text().trim();
@@ -62,14 +63,6 @@ $(".glyphicon-pencil").click(function(){
    $("#change_person_container").show();
 });
 
-
-//function to change the person associated with a task
-$(".image_label").click(function(){
-    $("#family_list_container").hide();
-    $("#change_person_container").show();
-    storePerson();
-    task = $(this);
-});
 
 $("#complete_change").click(function(){
    $(task).find("img").attr("src", 'img/' + familymember + '.jpg');
@@ -79,6 +72,10 @@ $("#complete_change").click(function(){
    $("#family_list_container").show();
 });
 
+$(".glyphicon-menu-right").click(function(){
+    $(this).hide();
+    $(this).parent().find(".toolbox").fadeIn(400);
+});
 
 
 

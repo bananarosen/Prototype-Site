@@ -45,19 +45,19 @@
 }
 
 .glyphicon-ok {
-    color: gray;
+    color: dodgerblue;
 }
 
 .glyphicon-ok:hover {
-    color: black;
+    color: blue;
 }
 
 .glyphicon-pencil {
-    color: lightblue;
+    color: lightgrey;
 }
 
 .glyphicon-pencil:hover {
-    color: dodgerblue;
+    color: gray;
 }
 
 .task_done {
@@ -68,6 +68,14 @@
     margin-top: 20px;
 }
 
-.navbar {
-    background-color: lavender;
+button {
+    border-color: darkgreen;
+    border-width: 1px;
+    background-color: palegreen;
+    border-radius: 5px;
 }
+
+button:hover {
+    background-color: lightgreen;
+}
+
