@@ -53,11 +53,11 @@
 }
 
 .glyphicon-pencil {
-    color: dodgerblue;
+    color: lightblue;
 }
 
 .glyphicon-pencil:hover {
-    color: blue;
+    color: dodgerblue;
 }
 
 .task_done {

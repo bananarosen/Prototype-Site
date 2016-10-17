@@ -56,8 +56,10 @@ $('#family_list_container').on('click', '.glyphicon-ok', function() {
 
 $(".glyphicon-pencil").click(function(){
    $("#family_list_container").hide();
-   $("#change_person_container").show();
    task = $(this).parent();
+   taskentered = $(task).text().trim();
+   $("#task_change_field").val(taskentered);
+   $("#change_person_container").show();
 });
 
 
@@ -70,7 +72,9 @@ $(".image_label").click(function(){
 });
 
 $("#complete_change").click(function(){
-   $(task).attr("src", 'img/' + familymember + '.jpg');
+   $(task).find("img").attr("src", 'img/' + familymember + '.jpg');
+   taskentered = ($("#task_change_field").val());
+   $(task).find(".basic_task").text(taskentered);
    $("#change_person_container").hide();
    $("#family_list_container").show();
 });

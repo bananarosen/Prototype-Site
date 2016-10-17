@@ -38,32 +38,36 @@
       
       <!-- list of tasks-->
       <ul class="list-group" id="family_list">
-        <li class="list-group-item" id="task_getg">
+        <li class="list-group-item">
+            <span class="label"><img src="img/kim.jpg" alt="kim" width="20" height="20" class="image_label"></span>
+            <span class="basic_task">Get groceries</span>
             <span class="glyphicon glyphicon-pencil"></span>
-            <span class="label"><img src="img/kim.jpg" alt="kim" width="20" height="20" class="image_label"></span>
-            Get groceries
             <span class="glyphicon glyphicon-remove float_right"></span>
             <span class="glyphicon glyphicon-ok float_right"></span>
         </li>
-        <li class="list-group-item" id="task_payb">
+        <li class="list-group-item">
             <span class="label"><img src="img/kim.jpg" alt="kim" width="20" height="20" class="image_label"></span>
-            Pay bills
+            <span class="basic_task">Pay bills</span>
             <span class="glyphicon glyphicon-remove float_right"></span>
             <span class="glyphicon glyphicon-ok float_right"></span>
+            <span class="glyphicon glyphicon-pencil"></span>
         </li>
-        <li class="list-group-item" id="task_pick">
+        <li class="list-group-item">
             <span class="label"><img src="img/kanye.jpg" alt="kanye" width="20" height="20" class="image_label"></span>
-            Pick kids up from school
+            <span class="basic_task">Pick kids up from school</span>
+            <span class="toolbox">
+            <span class="glyphicon glyphicon-pencil float_right"></span>
             <span class="glyphicon glyphicon-remove float_right"></span>
             <span class="glyphicon glyphicon-ok float_right"></span>
+            </span>
         </li>
-        <li class="list-group-item" id="task_take">
+        <li class="list-group-item">
             <span class="label"><img src="img/saint.jpg" alt="saint" width="20" height="20" class="image_label"></span>
             Take out trash
             <span class="glyphicon glyphicon-remove float_right"></span>
             <span class="glyphicon glyphicon-ok float_right"></span>
         </li>
-        <li class="list-group-item" id="task_dodi">
+        <li class="list-group-item">
             <span class="label"><img src="img/kanye.jpg" alt="kanye" width="20" height="20" class="image_label"></span>
             Do dishes
             <span class="glyphicon glyphicon-remove float_right"></span>
@@ -122,7 +126,7 @@
         
     </div> <!-- end of #add_task_container -->
       
-    <div id="change_person_container">
+    <div id="change_person_container"> 
         <h4>Who should do this task?</h4>
         <div class="row task_div">
             <div class="col-xs-2">
@@ -137,10 +141,13 @@
             <div class="col-xs-2">
                 <img src="img/saint.jpg" class="img-thumbnail person" id="saint" alt="saint">
             </div>
-        </div>
+        </div> 
         
+        <h4>What should they do?</h4>
+        <input type="text" name="task" id="task_change_field">
         <button id="complete_change">Done</button>
-    </div>
+        
+    </div> <!-- end of change_person_container -->
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
