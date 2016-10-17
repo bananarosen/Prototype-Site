@@ -39,54 +39,56 @@
       <!-- list of tasks-->
       <ul class="list-group" id="family_list">
         <li class="list-group-item" id="task_getg">
-            <span class="label"><img src="img/kim.jpg" alt="kim" width="20" height="20"></span>
+            <span class="glyphicon glyphicon-pencil"></span>
+            <span class="label"><img src="img/kim.jpg" alt="kim" width="20" height="20" class="image_label"></span>
             Get groceries
             <span class="glyphicon glyphicon-remove float_right"></span>
             <span class="glyphicon glyphicon-ok float_right"></span>
         </li>
         <li class="list-group-item" id="task_payb">
-            <span class="label"><img src="img/kim.jpg" alt="kim" width="20" height="20"></span>
+            <span class="label"><img src="img/kim.jpg" alt="kim" width="20" height="20" class="image_label"></span>
             Pay bills
             <span class="glyphicon glyphicon-remove float_right"></span>
             <span class="glyphicon glyphicon-ok float_right"></span>
         </li>
         <li class="list-group-item" id="task_pick">
-            <span class="label"><img src="img/kanye.jpg" alt="kanye" width="20" height="20"></span>
+            <span class="label"><img src="img/kanye.jpg" alt="kanye" width="20" height="20" class="image_label"></span>
             Pick kids up from school
             <span class="glyphicon glyphicon-remove float_right"></span>
             <span class="glyphicon glyphicon-ok float_right"></span>
         </li>
         <li class="list-group-item" id="task_take">
-            <span class="label"><img src="img/saint.jpg" alt="saint" width="20" height="20"></span>
+            <span class="label"><img src="img/saint.jpg" alt="saint" width="20" height="20" class="image_label"></span>
             Take out trash
             <span class="glyphicon glyphicon-remove float_right"></span>
             <span class="glyphicon glyphicon-ok float_right"></span>
         </li>
         <li class="list-group-item" id="task_dodi">
-            <span class="label"><img src="img/kanye.jpg" alt="kanye" width="20" height="20"></span>
+            <span class="label"><img src="img/kanye.jpg" alt="kanye" width="20" height="20" class="image_label"></span>
             Do dishes
             <span class="glyphicon glyphicon-remove float_right"></span>
             <span class="glyphicon glyphicon-ok float_right"></span>
         </li>
         <li class="list-group-item">
-            <span class="label"><img src="img/kim.jpg" alt="kim" width="20" height="20"></span>
+            <span class="label"><img src="img/kim.jpg" alt="kim" width="20" height="20" class="image_label"></span>
             Call Khloe
             <span class="glyphicon glyphicon-remove float_right"></span>
             <span class="glyphicon glyphicon-ok float_right"></span>
         </li>
         <li class="list-group-item">
-            <span class="label"><img src="img/north.jpg" alt="north" width="20" height="20"></span>
+            <span class="label"><img src="img/north.jpg" alt="north" width="20" height="20" class="image_label"></span>
             Feed cat
             <span class="glyphicon glyphicon-remove float_right"></span>
             <span class="glyphicon glyphicon-ok float_right"></span>
         </li>
         <li class="list-group-item">
-            <span class="label"><img src="img/north.jpg" alt="north" width="20" height="20"></span>
+            <span class="label"><img src="img/north.jpg" alt="north" width="20" height="20" class="image_label"></span>
             Sort laundry
             <span class="glyphicon glyphicon-remove float_right"></span>
             <span class="glyphicon glyphicon-ok float_right"></span>
         </li>
       </ul>
+          
       
       <div class="footer navbar-fixed-bottom centre">
           <button class="bottom_button" id="add_task">
@@ -119,6 +121,26 @@
         <button id="complete_add">Add Task</button>
         
     </div> <!-- end of #add_task_container -->
+      
+    <div id="change_person_container">
+        <h4>Who should do this task?</h4>
+        <div class="row task_div">
+            <div class="col-xs-2">
+                <img src="img/kim.png" class="img-thumbnail person" id="kim" alt="kim">
+            </div>
+            <div class="col-xs-2">
+                <img src="img/kanye.png" class="img-thumbnail person" id="kanye" alt="kanye">
+            </div>
+            <div class="col-xs-2">
+                <img src="img/north.jpg" class="img-thumbnail person" id="north" alt="north">
+            </div>
+            <div class="col-xs-2">
+                <img src="img/saint.jpg" class="img-thumbnail person" id="saint" alt="saint">
+            </div>
+        </div>
+        
+        <button id="complete_change">Done</button>
+    </div>
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

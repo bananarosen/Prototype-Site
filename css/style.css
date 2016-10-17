@@ -7,8 +7,13 @@
 .bottom_button {
     background-color: lightgoldenrodyellow;
     padding: 10px 60px 10px 60px;
+    margin-bottom: 10px;
     border-radius: 4px;
     font-size: 14pt;  
+}
+
+.bottom_button:hover {
+    background-color: #f5f5a4;
 }
 
 .centre {
@@ -19,7 +24,7 @@
     margin-top: 30px;
 }
 
-#add_task_container{
+#add_task_container, #change_person_container {
     margin-left: 30px;
 }
 
@@ -47,6 +52,22 @@
     color: black;
 }
 
+.glyphicon-pencil {
+    color: dodgerblue;
+}
+
+.glyphicon-pencil:hover {
+    color: blue;
+}
+
 .task_done {
     text-decoration: line-through;
+}
+
+#complete_change {
+    margin-top: 20px;
+}
+
+.navbar {
+    background-color: lavender;
 }
