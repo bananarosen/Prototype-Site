@@ -16,6 +16,7 @@ $("#add_task").click(function(){
     //resetting the task value field
     $("#task_field").val("");
     $("#add_task_container").show(); 
+    $("#header").text("Add Task");
 });
 
 /*storing the name of the family member who was clicked on 
@@ -36,15 +37,16 @@ $("#complete_add").click(function(){
     taskentered = ($("#task_field").val());
     $("#add_task_container").hide();
     $("#family_list_container").show();
-    $("#family_list").append('<li class="list-group-item">' + '<span class="label"><img src="img/'+ familymember+ '.jpg" width="20" height="20"></span> <span class="basic_task">'+ taskentered + ' </span><span class="glyphicon glyphicon-pencil"></span><span class="glyphicon glyphicon-remove float_right"></span><span class="glyphicon glyphicon-ok float_right"></span></li>');
+    $("#family_list").append('<li class="list-group-item">' + '<span class="label"><img src="img/'+ familymember+ '.jpg" width="20" height="20" class=' + familymember + '></span> <span class="basic_task">'+ taskentered + ' </span><span class="glyphicon glyphicon-pencil"></span><span class="glyphicon glyphicon-remove float_right"></span><span class="glyphicon glyphicon-ok float_right"></span></li>');
+    $("#header").text("Family List");
     createOnClickListenerRemove(); 
 });
 
 
-//function to hold the delete task 
+//function to hold the delete task function
 function createOnClickListenerRemove() {
 $(".glyphicon-remove").click(function(){
-    $(this).parent().fadeOut(500);
+    $(this).parent().fadeOut(500).remove();
 });
 };
 
@@ -55,27 +57,52 @@ $('#family_list_container').on('click', '.glyphicon-ok', function() {
     $(this).parent().toggleClass("task_done");
 }); 
 
+
+//function to open the edit task view
 $('#family_list_container').on('click', '.glyphicon-pencil', function(){
    $("#family_list_container").hide();
+   $(".person").removeClass("person_selected");
    task = $(this).parent();
    taskentered = $(task).text().trim();
    $("#task_change_field").val(taskentered);
    $("#change_person_container").show();
+   $("#header").text("Edit Task");
+   familymember = $(task).find("img").attr("class");
 });
 
-
+//function to implement changes into the main function
 $("#complete_change").click(function(){
    $(task).find("img").attr("src", 'img/' + familymember + '.jpg');
+   $(task).find("img").removeClass();
+   $(task).find("img").addClass(familymember);    
    taskentered = ($("#task_change_field").val());
    $(task).find(".basic_task").text(taskentered);
    $("#change_person_container").hide();
    $("#family_list_container").show();
+   $("#header").text("Family List");
 });
 
-$(".glyphicon-menu-right").click(function(){
-    $(this).hide();
-    $(this).parent().find(".toolbox").fadeIn(400);
+//function to show only the kim's tasks
+$("#my_list").click(function(){
+   $("img.kanye").parents("li").hide();   
+   $("img.north").parents("li").hide();
+   $("img.saint").parents("li").hide();
+   $("li.active").removeClass("active");
+   $("#my_list").parent().addClass("active");
+   $("#header").text("My List");
 });
+
+//function to switch back to family list
+$("#fam").click(function(){
+  console.log("been clicked");
+  $("li.active").removeClass("active");
+  $("#fam").parent().addClass("active");
+  $(".list-group-item").show();
+  $("#header").text("Family List");
+}); 
+
+
+
 
 
 
